@@ -1,3 +1,3 @@
 """
-Pacote de testes para o Tarefy.
+Pacote de testes para o Textify.
 """
