@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# Script de build para o Tarefy
+# Script de build para o Textify
 # Este script constrói e publica a imagem Docker
 
 set -e
 
 # Configurações
-IMAGE_NAME="tarefy"
+IMAGE_NAME="textify"
 REGISTRY="mathpina"
 VERSION=${1:-"latest"}
 PLATFORMS="linux/amd64,linux/arm64"
 
-echo "🐳 Construindo imagem Docker do Tarefy..."
+echo "🐳 Construindo imagem Docker do Textify..."
 echo "   Imagem: $REGISTRY/$IMAGE_NAME:$VERSION"
 echo "   Plataformas: $PLATFORMS"
 
@@ -28,13 +28,13 @@ if ! docker buildx version &> /dev/null; then
 fi
 
 # Criar builder se não existir
-if ! docker buildx ls | grep -q "tarefy-builder"; then
+if ! docker buildx ls | grep -q "textify-builder"; then
     echo "🔧 Criando builder multi-plataforma..."
-    docker buildx create --name tarefy-builder --use
+    docker buildx create --name textify-builder --use
 fi
 
 # Usar o builder
-docker buildx use tarefy-builder
+docker buildx use textify-builder
 
 # Fazer login no Docker Hub (se necessário)
 if [ ! -z "$DOCKER_USERNAME" ] && [ ! -z "$DOCKER_PASSWORD" ]; then
@@ -60,7 +60,7 @@ echo "🔍 Verificando imagem..."
 docker buildx imagetools inspect $REGISTRY/$IMAGE_NAME:$VERSION
 
 echo ""
-echo "🎉 Imagem Docker do Tarefy está pronta!"
+echo "🎉 Imagem Docker do Textify está pronta!"
 echo ""
 echo "📋 Para usar a imagem:"
 echo "   docker run -p 8000:8000 $REGISTRY/$IMAGE_NAME:$VERSION"

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Script de configuração para o Tarefy
+# Script de configuração para o Textify
 # Este script configura o ambiente de desenvolvimento
 
 set -e
 
-echo "🚀 Configurando ambiente de desenvolvimento do Tarefy..."
+echo "🚀 Configurando ambiente de desenvolvimento do Textify..."
 
 # Verificar se Python está instalado
 if ! command -v python3 &> /dev/null; then
@@ -100,4 +100,4 @@ echo "   2. Execute: source venv/bin/activate"
 echo "   3. Execute: cd src && uvicorn main:app --reload"
 echo "   4. Acesse: http://localhost:8000/docs"
 echo ""
-echo "🎉 Tarefy está pronto para desenvolvimento!"
+echo "🎉 Textify está pronto para desenvolvimento!"

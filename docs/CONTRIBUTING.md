@@ -1,6 +1,6 @@
-# Contribuindo para o Tarefy
+# Contribuindo para o Textify
 
-Obrigado por considerar contribuir para o Tarefy! Este documento fornece diretrizes para contribuições.
+Obrigado por considerar contribuir para o Textify! Este documento fornece diretrizes para contribuições.
 
 ## 🚀 Como Contribuir
 
@@ -9,8 +9,8 @@ Obrigado por considerar contribuir para o Tarefy! Este documento fornece diretri
 ```bash
 # Fork o repositório no GitHub
 # Clone seu fork
-git clone https://github.com/seu-usuario/tarefy.git
-cd tarefy
+git clone https://github.com/matheuspina/textify.git
+cd textify
 ```
 
 ### 2. Configure o Ambiente de Desenvolvimento
@@ -183,7 +183,7 @@ Se aplicável, adicione screenshots.
 **Ambiente:**
 - OS: [e.g. Ubuntu 20.04]
 - Python: [e.g. 3.9.7]
-- Versão do Tarefy: [e.g. 1.0.0]
+- Versão do Textify: [e.g. 1.0.0]
 
 **Contexto Adicional**
 Qualquer outra informação relevante.
@@ -273,4 +273,4 @@ Todos os contribuidores serão reconhecidos no README.md e releases.
 
 ---
 
-Obrigado por contribuir para o Tarefy! 🚀
+Obrigado por contribuir para o Textify! 🚀

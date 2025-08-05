@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Descrição do Bug**
-Uma descrição clara e concisa do que é o bug.
+Uma descrição clara e concisa do que é o bug no Textify.
 
 **Para Reproduzir**
 Passos para reproduzir o comportamento:
@@ -26,7 +26,7 @@ Se aplicável, adicione screenshots para ajudar a explicar seu problema.
 **Informações do Ambiente:**
  - OS: [ex: Ubuntu 20.04, Windows 10, macOS 12.0]
  - Versão do Python: [ex: 3.9.7]
- - Versão do Tarefy: [ex: 1.9.0]
+ - Versão do Textify: [ex: 1.9.0]
  - Método de instalação: [ex: Docker, pip, source]
 
 **Arquivo de Exemplo**

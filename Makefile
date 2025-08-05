@@ -3,7 +3,7 @@
 # Variáveis
 PYTHON := python3
 PIP := pip
-DOCKER_IMAGE := mathpina/tarefy
+DOCKER_IMAGE := mathpina/textify
 VERSION := 1.9.0
 
 # Cores para output
@@ -14,7 +14,7 @@ BLUE := \033[0;34m
 NC := \033[0m # No Color
 
 help: ## Mostra esta mensagem de ajuda
-	@echo "$(BLUE)Tarefy - Conversor Universal de Arquivos$(NC)"
+	@echo "$(BLUE)Textify - Conversor Universal de Arquivos$(NC)"
 	@echo ""
 	@echo "$(YELLOW)Comandos disponíveis:$(NC)"
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  $(GREEN)%-15s$(NC) %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -73,11 +73,11 @@ clean: ## Remove arquivos temporários
 	rm -rf .mypy_cache/
 
 run: ## Executa a aplicação localmente
-	@echo "$(BLUE)🚀 Iniciando Tarefy...$(NC)"
+	@echo "$(BLUE)🚀 Iniciando Textify...$(NC)"
 	cd src && uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 run-prod: ## Executa a aplicação em modo produção
-	@echo "$(BLUE)🚀 Iniciando Tarefy (produção)...$(NC)"
+	@echo "$(BLUE)🚀 Iniciando Textify (produção)...$(NC)"
 	cd src && uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 
 docker-build: ## Constrói a imagem Docker

@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-**Sua solicitação de feature está relacionada a um problema? Por favor descreva.**
-Uma descrição clara e concisa de qual é o problema. Ex: Eu fico sempre frustrado quando [...]
+**Sua solicitação de recurso está relacionada a um problema? Descreva.**
+Uma descrição clara e concisa do problema. Ex. Eu sempre fico frustrado quando uso o Textify para [...]
 
 **Descreva a solução que você gostaria**
 Uma descrição clara e concisa do que você quer que aconteça.

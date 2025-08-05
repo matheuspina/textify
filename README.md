@@ -1,4 +1,4 @@
-# Tarefy - API de Conversão de Arquivos
+# Textify - API de Conversão de Arquivos
 
 Uma API FastAPI moderna e robusta para extrair texto de diversos formatos de arquivo, com suporte a Docker Swarm, autenticação por API key e geração de URLs temporárias para download.
 
@@ -14,7 +14,7 @@ Uma API FastAPI moderna e robusta para extrair texto de diversos formatos de arq
 ## 📁 Estrutura do Projeto
 
 ```
-tarefy/
+textify/
 ├── src/                          # Código fonte principal
 │   ├── main.py                   # Aplicação FastAPI principal
 │   ├── file_converter.py         # Lógica de conversão de arquivos
@@ -48,8 +48,8 @@ tarefy/
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/tarefy.git
-cd tarefy
+git clone https://github.com/matheuspina/textify.git
+cd textify
 ```
 
 2. **Configure o ambiente**
@@ -92,7 +92,7 @@ echo "$API_KEY" | docker secret create api_key -
 3. **Deploy**
 ```bash
 cd docker
-docker stack deploy -c docker-compose.swarm.yml tarefy
+docker stack deploy -c docker-compose.swarm.yml textify
 ```
 
 ## 🌐 Endpoints da API
@@ -167,13 +167,13 @@ docker service ls
 
 ### Ver logs
 ```bash
-docker service logs tarefy_api
-docker service logs tarefy_nginx
+docker service logs textify_api
+docker service logs textify_nginx
 ```
 
 ### Escalar serviços
 ```bash
-docker service scale tarefy_api=5
+docker service scale textify_api=5
 ```
 
 ## 🛠️ Desenvolvimento
@@ -193,7 +193,7 @@ flake8 src/
 ### Build da imagem Docker
 ```bash
 cd docker
-docker build -t tarefy:latest .
+docker build -t textify:latest .
 ```
 
 ## 📚 Documentação
@@ -218,7 +218,7 @@ docker build -t tarefy:latest .
 docker-compose logs -f
 
 # Docker Swarm
-docker service logs -f tarefy_api
+docker service logs -f textify_api
 ```
 
 ## 🤝 Contribuição
@@ -242,4 +242,4 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ---
 
-**Tarefy** - Transformando arquivos em texto de forma simples e eficiente.
+**Textify** - Transformando arquivos em texto de forma simples e eficiente.

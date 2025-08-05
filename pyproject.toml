@@ -3,13 +3,13 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tarefy"
+name = "textify"
 version = "1.9.0"
 description = "Conversor Universal de Arquivos para LLMs"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Matheus Pina", email = "mathpina@gmail.com"}
+    {name = "Matheus Pina", email = "mathpinab@gmail.com"}
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -50,10 +50,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mathpina/tarefy"
-Repository = "https://github.com/mathpina/tarefy.git"
-Documentation = "https://github.com/mathpina/tarefy#readme"
-"Bug Tracker" = "https://github.com/mathpina/tarefy/issues"
+Homepage = "https://github.com/matheuspina/textify"
+Repository = "https://github.com/matheuspina/textify.git"
+Documentation = "https://github.com/matheuspina/textify#readme"
+"Bug Tracker" = "https://github.com/matheuspina/textify/issues"
 
 [tool.black]
 line-length = 88

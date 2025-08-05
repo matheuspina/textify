@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Textify CI/CD
 
 on:
   push:
@@ -90,7 +90,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ secrets.DOCKER_USERNAME }}/tarefy
+        images: ${{ secrets.DOCKER_USERNAME }}/textify
         tags: |
           type=ref,event=branch
           type=ref,event=pr

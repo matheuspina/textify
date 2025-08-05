@@ -1,11 +1,11 @@
-# Estrutura do Projeto Tarefy
+# Estrutura do Projeto Textify
 
-Este documento descreve a organização e estrutura do projeto Tarefy.
+Este documento descreve a organização e estrutura do projeto Textify.
 
 ## Visão Geral da Estrutura
 
 ```
-tarefy/
+textify/
 ├── .env                          # Variáveis de ambiente (não commitado)
 ├── .env.example                  # Exemplo de variáveis de ambiente
 ├── .github/                      # Configurações do GitHub
@@ -160,7 +160,7 @@ make docker-compose-up
 
 ### Produção (Docker Swarm)
 ```bash
-cd docker && docker stack deploy -c docker-compose.swarm.yml tarefy
+cd docker && docker stack deploy -c docker-compose.swarm.yml textify
 ```
 
 ## Monitoramento
