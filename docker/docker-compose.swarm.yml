@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  tarefy-api:
+    image: tarefy:latest
+    environment:
+      - API_KEY_FILE=/run/secrets/api_key
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    secrets:
+      - api_key
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+      update_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: rollback
+        monitor: 60s
+        max_failure_ratio: 0.3
+      rollback_config:
+        parallelism: 1
+        delay: 10s
+        failure_action: pause
+        monitor: 60s
+        max_failure_ratio: 0.3
+      placement:
+        constraints:
+          - node.role == worker
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.tarefy.rule=Host(`tarefy.yourdomain.com`)"
+        - "traefik.http.routers.tarefy.entrypoints=websecure"
+        - "traefik.http.routers.tarefy.tls.certresolver=letsencrypt"
+        - "traefik.http.services.tarefy.loadbalancer.server.port=8000"
+        - "traefik.docker.network=traefik-public"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - traefik-public
+      - tarefy-internal
+
+secrets:
+  api_key:
+    external: true
+
+networks:
+  traefik-public:
+    external: true
+  tarefy-internal:
+    driver: overlay
+    attachable: true
